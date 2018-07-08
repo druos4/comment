@@ -7,7 +7,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('comments', 'ArticleController@index');
 Route::get('comments/{article}', 'ArticleController@show');
 Route::post('comments', 'ArticleController@store');
 Route::put('comments/{article}', 'ArticleController@update');
