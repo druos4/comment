@@ -7,17 +7,9 @@ use App\Comments;
 
 class CommentsController extends Controller
 {
-    public function index()
-    {
-        return Comments::all();
-    }
-
     public function show($postId)
     {
         $comments = Comments::getComment($postId);
-        echo 'post id = '.$postId.'<br />';
-        echo $comments;
-        die;
         return $comments;
     }
 
